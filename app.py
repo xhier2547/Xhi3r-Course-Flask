@@ -2,9 +2,25 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/hello')
+@app.route('/')
 def index():
-    return "hello fuck"
+    return ""
+
+@app.route('/')
+def index():
+    return ""
+
+@app.route('/')
+def index():
+    return ""
+
+@app.route('/')
+def index():
+    return ""
+
+@app.route('/')
+def index():
+    return ""
 
 if __name__ =="__main__":
     app.run()
