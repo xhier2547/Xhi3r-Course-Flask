@@ -1,26 +1,22 @@
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, render_template
 
-
-@app.route('index')
-def index():
-    return ""
+app = Flask(__name__, static_folder='assets/static', template_folder='templates')
 
 @app.route('/')
 def index():
-    return ""
+    return render_template("index.html")
 
-@app.route('/')
-def index():
-    return ""
+@app.route('/login')
+def login():
+    return render_template("login.html")
 
-@app.route('/')
-def index():
-    return ""
+@app.route('/register')
+def register():
+    return render_template("register.html")
 
-@app.route('/')
-def index():
-    return ""
+@app.route('/blog')
+def blog():
+    return render_template("blog.html")
 
 if __name__ =="__main__":
-    app.run()
+    app.run(debug=True)
