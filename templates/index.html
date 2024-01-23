@@ -45,7 +45,7 @@
             </a>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="#hero">Home</a></li>
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Market</a></li>
                     <li><a href="#portfolio">Course</a></li>
@@ -54,8 +54,8 @@
                     <li><a href="{{ url_for('login') }}"><span>Login</span></a></li>
                 </ul>
             </nav>
-            <i class="mobile-nav-togle mobile-nav-show"></i>
-            <i class="mobile-nav-togle mobile-nav-hide"></i>
+            <i class="mobile-nav-togle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-togle mobile-nav-hide d-none bi bi-x"></i>
         </div>
     </header>
 
@@ -71,7 +71,7 @@
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod rerum delectus molestias nulla voluptatibus tempora est obcaecati expedita ipsa quam corrupti quae, totam, alias velit provident illo. Animi, vitae iste?</p>
                         <div class="d-flex justify-content-center justify-content-lg-start">
                             <a href="#about" class="btn-get-start">To Site</a>
-                            <a href="https://www.youtube.com/watch?v=RIXni4sZaA4" class="glightbox"><i class="bi bi-play-circle"><span>Watch God Video</span></i></a>
+                            <a href="https://www.youtube.com/watch?v=RIXni4sZaA4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"><span>Watch God Video</span></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2">
@@ -88,6 +88,7 @@
         <!-- about me -->
         <section id="about" class="about">
             <div class="container" data-aos="fade-up">
+                
                 <div class="section-header">
                     <h2>About Xhi3r</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi repellat nihil illum hic nam voluptas iste ullam a quam ratione.</p>
@@ -100,10 +101,28 @@
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi neque eveniet eligendi esse accusantium veniam deserunt corporis accusamus facilis perferendis.</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio architecto eum ab sed libero impedit ratione amet odit est tenetur.</p>
                     </div>
-                    .
+                    <div class="col-lg-6">
+                        <div class="content ps-0 ps-lg-5">
+                            <p class="fst-italic">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua.
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check-circle-fill"></i> I am the best player in the game.</li>
+                                <li><i class="bi bi-check-circle-fill"></i> I have most exp in this game.</li>
+                                <li><i class="bi bi-check-circle-fill"></i> I have the all of style of player in this game.</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut temporibus suscipit quo aut omnis asperiores modi saepe voluptates, accusantium totam consequuntur similique veritatis voluptatibus. Eos maiores placeat alias! Odit, minima!
+                            </p>
+                            <div class="position-relative mt-4">
+                                <img src="" class="img-fluid rounded-4" alt="">
+                                <a href="" class="glightbox play-btn"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section> <!--end about-->
 
 
         <!--clients-->
