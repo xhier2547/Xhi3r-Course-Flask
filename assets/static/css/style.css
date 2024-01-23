@@ -773,7 +773,7 @@ input[type="submit"]:hover{
   outline: none;
   margin: 0px 0 20px;
   text-align: center;
-  line-height: 50px; /* Ensure vertical centering */
+  line-height: 50px; 
 }
 a.register-btn:hover{
   border-color:#0087d4 ;
@@ -793,10 +793,10 @@ a.register-btn:hover{
   outline: none;
   margin: 0px 0 20px;
   text-align: center;
-  line-height: 50px; /* Ensure vertical centering */
+  line-height: 50px; 
 }
 a.backtomenu-btn:hover{
-  border-color:#0087d4 ;
+  border-color:#ff8989 ;
   transition: .5s;
 }
 
