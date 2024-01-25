@@ -58,23 +58,30 @@
 
     <div class="card-login">
         <h1>Login</h1>
-        <form method="post">
+        <form id="formAuthentication" class="mb-3" action="{{ url_for('login') }}" method="POST">
             <div class="txt_field">
-                <input type="text" required>
+                <input type="text" required id="username" name="username">
                 <span></span>
                 <label>Username</label>
             </div>
             <div class="txt_field">
-                <input type="password" required>
+                <input type="password" required id="password" name="password">
+                
                 <span></span>
                 <label>Password</label>
             </div>
             <input type="submit" value="Submit" id="ntp"></input>
             <a class="register-btn"  href="{{ url_for('register') }}">Register</a>
         </form>
-        
     </div>
-
+    
+    {% if flashed_messages %}
+        <div class="alert alert-danger" role="alert">
+        {% for message in flashed_messages %}
+            {{ message }}
+        {% endfor %}
+        </div>
+    {% endif %}
 
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
