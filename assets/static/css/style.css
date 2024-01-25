@@ -660,6 +660,14 @@ section {
   color: #fff;
 }
 
+.to-site {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
 @media (max-width: 640px) {
   .intro h2 {
     font-size: 36px;
