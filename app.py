@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder='assets/static', template_folder='templates'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'  # ชื่อของ function สำหรับหน้าล็อกอิน
+login_manager.login_view = 'login' 
 login_manager.init_app(app)
 
 db.init_app(app)
@@ -34,7 +34,7 @@ def login():
             login_user(user)
             return redirect(url_for('index'))
         else:
-            flash('Invalid username or password', 'error')  # Flash an error message
+            flash('Invalid username or password', 'error')  
             return redirect(url_for('login'))
     flash_messages = list(get_flashed_messages())
     return render_template('login.html', flashed_messages=flash_messages)
@@ -64,27 +64,9 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html')
 
-
-
 @app.route('/blog')
 def blog():
     return render_template("blog.html")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if __name__ =="__main__":
     with app.app_context():
