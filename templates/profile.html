@@ -25,7 +25,6 @@
     <!-- CSS main -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
 </head>
 
 <body>
@@ -83,10 +82,28 @@
 
         </div>
     </header>
-    <h1><img src="/assets/img/good.png" alt="" srcset=""></h1>
 
+    <main>
+        <section class="align-items-center">
+            <h2>Welcome, {{ user.username }} !</h2>
+            <p>Name: {{ user.name }}</p>
 
+            {% block content %}
+            <div class="container">
+                <h2>Edit Profile</h2>
+                <form method="POST" action="{{ url_for('profile') }}">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="{{ user.name }}" required>
 
+                    <label for="password">New Password:</label>
+                    <input type="password" name="password">
+
+                    <button type="submit">Update Profile</button>
+                </form>
+            </div>
+            {% endblock %}
+        </section>
+    </main>
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
@@ -96,7 +113,6 @@
     <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
 
 </body>
 

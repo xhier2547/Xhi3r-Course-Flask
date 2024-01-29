@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Xhi3r Shop</title>
-    
+
     <link href="{{ url_for('static', filename='img/xhier-icon.png') }}" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 
     <!-- Assets -->
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -20,22 +23,27 @@
     <!-- CSS main -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
-        <!--  Header -->
+    <!--  Header -->
     <section id="topbar" class="topbar d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:valorantrama9.1@gmail.com">valorantrama9.1@gmail.com</a></i>
+                <i class="bi bi-envelope d-flex align-items-center"><a
+                        href="mailto:valorantrama9.1@gmail.com">valorantrama9.1@gmail.com</a></i>
                 <i class="bi bi-phone d-flex align-items-center ms-4"><span>+6665 624 1293</span></i>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
                 <a href="https://twitter.com/Xhi3r" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100015127746814" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/tng.aj/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-        
+                <a href="https://www.facebook.com/profile.php?id=100015127746814" class="facebook" target="_blank"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/tng.aj/" class="instagram" target="_blank"><i
+                        class="bi bi-instagram"></i></a>
+
             </div>
         </div>
-    </section> 
+    </section>
+
     <header id="header" class="header d-flex align-items-center">
 
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -46,15 +54,29 @@
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Market</a></li>
-                    <li><a href="#portfolio">Course</a></li>
+                    <li><a href="#market">Market</a></li>
+                    <li><a href="#course">Course</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    {% if current_user.is_authenticated %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {{ user.name }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                        </ul>
+                    </li>
+                    {% else %}
                     <li><a href="{{ url_for('login') }}"><span>Login</span></a></li>
+                    {% endif %}
                 </ul>
             </nav>
-            <i class="mobile-nav-togle mobile-nav-show"></i>
-            <i class="mobile-nav-togle mobile-nav-hide"></i>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+
         </div>
     </header>
 
@@ -68,22 +90,22 @@
             </div>
             <div class="txt_field">
                 <input type="password" required id="password" name="password">
-                
+
                 <span></span>
                 <label>Password</label>
             </div>
             <input type="submit" value="Submit" id="ntp"></input>
             <h5 class="text-regis"><span>If dont have account, pls </span></h5>
-            <a class="register-btn"   href="{{ url_for('register') }}">Register</a>
+            <a class="register-btn" href="{{ url_for('register') }}">Register</a>
         </form>
     </div>
-    
+
     {% if flashed_messages %}
-        <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger" role="alert">
         {% for message in flashed_messages %}
-            {{ message }}
+        {{ message }}
         {% endfor %}
-        </div>
+    </div>
     {% endif %}
 
 
@@ -97,4 +119,5 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
+
 </html>

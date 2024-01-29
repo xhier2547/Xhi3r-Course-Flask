@@ -57,18 +57,27 @@
                 <ul>
                     <li><a href="{{ url_for('index')}}">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Market</a></li>
-                    <li><a href="#portfolio">Course</a></li>
+                    <li><a href="#market">Market</a></li>
+                    <li><a href="#course">Course</a></li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    {% if current_user.is_authenticated %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {{ current_user.name }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                        </ul>
+                    </li>
+                    {% else %}
                     <li><a href="{{ url_for('login') }}"><span>Login</span></a></li>
+                    {% endif %}
                 </ul>
             </nav>
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-
-
         </div>
     </header>
 
@@ -317,17 +326,6 @@
 
 
 
-        <!-- team-->
-        <section id="team" class="team">
-            <div class="container" data-aos="fade-up">
-                <div class="section-header">
-                    <h2><strong> Team </strong></h2>
-                    <h3>นี่คือเหล่าผู้กล้า ที่จะพาทุกคนออกจากความโง่และดักดาน จงสรรเสริญพวกเขาซะ</h3>
-                </div>
-            </div>
-        </section>
-
-
         <!-- course -->
         <section id="course" class="course">
             <div class="container" data-aos="fade-up">
@@ -339,7 +337,15 @@
             </div>
         </section>
 
-
+        <!-- team-->
+        <section id="team" class="team">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header">
+                    <h2><strong> Team </strong></h2>
+                    <h3>นี่คือเหล่าผู้กล้า ที่จะพาทุกคนออกจากความโง่และดักดาน จงสรรเสริญพวกเขาซะ</h3>
+                </div>
+            </div>
+        </section>
 
         <!-- q&a -->
         <section id="faq" class="faq">
@@ -415,7 +421,8 @@
                     <h4>Contact </h4>
                     <p>
                         <strong>Phone : </strong>+66 65 624 1293<br>
-                        <h6><strong>Email : </strong><a href="mailto:valorantrama9.1@gmail.com">valorantrama9.1@gmail.com</a></h6>
+                    <h6><strong>Email : </strong><a
+                            href="mailto:valorantrama9.1@gmail.com">valorantrama9.1@gmail.com</a></h6>
                     </p>
 
                 </div>
