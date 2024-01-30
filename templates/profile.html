@@ -84,25 +84,22 @@
     </header>
 
     <main>
-        <section class="align-items-center">
-            <h2>Welcome, {{ user.username }} !</h2>
-            <p>Name: {{ user.name }}</p>
-
-            {% block content %}
-            <div class="container">
-                <h2>Edit Profile</h2>
-                <form method="POST" action="{{ url_for('profile') }}">
-                    <label for="name">Name:</label>
+        <div class=" card-login ">
+            <h1>Edit Profile <br>Name: {{ user.name }}</h1>
+            <form method="POST" action="{{ url_for('profile') }}">
+                <div class="txt_field">
                     <input type="text" name="name" value="{{ user.name }}" required>
-
+                    <span></span>
+                    <label for="name">New Name:</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" required id="password" >
+                    <span></span>
                     <label for="password">New Password:</label>
-                    <input type="password" name="password">
-
-                    <button type="submit">Update Profile</button>
-                </form>
-            </div>
-            {% endblock %}
-        </section>
+                </div>
+                <input type="submit" value="Update Profile" id="ntp"></input>
+            </form>
+        </div>
     </main>
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

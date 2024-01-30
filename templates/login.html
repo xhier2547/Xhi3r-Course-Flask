@@ -82,7 +82,7 @@
 
     <div class="card-login">
         <h1>Login</h1>
-        <form id="formAuthentication" class="mb-3" action="{{ url_for('login') }}" method="POST">
+        <form type="password" required id="password" name="password" class="mb-3" action="{{ url_for('login') }}" method="POST">
             <div class="txt_field">
                 <input type="text" required id="username" name="username">
                 <span></span>
@@ -90,7 +90,6 @@
             </div>
             <div class="txt_field">
                 <input type="password" required id="password" name="password">
-
                 <span></span>
                 <label>Password</label>
             </div>

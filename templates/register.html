@@ -86,7 +86,7 @@
         <h1>Register</h1>
         <form id="formAuthentication" class="mb-3" action="{{ url_for('register') }}" method="POST">
             <div class="txt_field">
-                <input type="text" required id="name">
+                <input type="text" required id="name" name="name">
                 <span></span>
                 <label>Name</label>
             </div>
@@ -105,7 +105,7 @@
                 <span></span>
                 <label>Confirm password</label>
             </div>
-            <input type="submit" value="Sumit" id="ntp"></input>
+            <input type="submit" value="Submit" id="ntp"></input>
             <a class="backtomenu-btn" href="{{ url_for('login') }}">Back to login</a>
         </form>
     </div>
