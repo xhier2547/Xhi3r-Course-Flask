@@ -1,7 +1,7 @@
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Poppins", sans-serif;
+  --font-default: "Single Day","Mali", cursive, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Single Day","Mali" ;
+  --font-secondary: "Single Day","Mali";
 }
 
 /* Colors */
@@ -62,7 +62,7 @@ section {
 }
 
 .section-header h2 {
-  font-size: 32px;
+  font-size: 48px;
   font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -119,7 +119,7 @@ section {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   color: var(--color-default);
 }
@@ -228,7 +228,7 @@ section {
 .topbar {
   background: #1035ad;
   height: 40px;
-  font-size: 14px;
+  font-size: 18px;
   transition: all 0.5s;
   color: #fff;
   padding: 0;
@@ -250,7 +250,7 @@ section {
 
   .topbar .contact-info i a,
   .topbar .contact-info i span {
-    font-size: 13px;
+    font-size: 17px;
   }
 }
 
@@ -297,7 +297,7 @@ section {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 45px;
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -349,7 +349,7 @@ section {
     justify-content: space-between;
     padding: 0 3px;
     font-family: var(--font-secondary);
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.6);
     white-space: nowrap;
@@ -359,7 +359,7 @@ section {
 
   .navbar a i,
   .navbar a:focus i {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 0;
     margin-left: 5px;
   }
@@ -413,7 +413,7 @@ section {
 
   .navbar .dropdown ul a {
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 18px;
     text-transform: none;
     font-weight: 600;
     color: #063070;
@@ -777,7 +777,7 @@ section {
 
 .about h3 {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
   font-family: var(--font-secondary);
   color: #000000;
@@ -794,7 +794,7 @@ section {
 }
 
 .about .call-us h4 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -1162,7 +1162,7 @@ a.backtomenu-btn:hover{
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  font-size: 14px;
+  font-size: 18px;
   background-color: var(--color-primary);
   padding: 50px 0;
   color: white;
@@ -1180,7 +1180,7 @@ a.backtomenu-btn:hover{
 }
 
 .footer .footer-info .logo span {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
@@ -1188,7 +1188,7 @@ a.backtomenu-btn:hover{
 }
 
 .footer .footer-info p {
-  font-size: 14px;
+  font-size: 20px;
   font-family: var(--font-primary);
 }
 
@@ -1200,7 +1200,7 @@ a.backtomenu-btn:hover{
   height: 40px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
+  font-size: 24px;
   color: rgba(255, 255, 255, 0.7);
   margin-right: 10px;
   transition: 0.3s;
@@ -1212,7 +1212,7 @@ a.backtomenu-btn:hover{
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
@@ -1231,7 +1231,7 @@ a.backtomenu-btn:hover{
 .footer .footer-links ul i {
   padding-right: 2px;
   color: rgba(14, 71, 194, 0.8);
-  font-size: 12px;
+  font-size: 18px;
   line-height: 0;
 }
 
