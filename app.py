@@ -35,7 +35,7 @@ def login():
             flash('Invalid username or password', 'error')
             return redirect(url_for('login'))
 
-    return render_template('login.html')
+    return render_template('login.html', user=current_user)
 
 @app.route('/logout')
 @login_required
@@ -45,9 +45,9 @@ def logout():
 
 
 
-@app.route('/profile', methods=['GET', 'POST'])
+@app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
-def profile():
+def edit_profile():
     if request.method == 'POST':
         
         name = request.form.get('name')
@@ -55,7 +55,7 @@ def profile():
 
         if not name:
             flash('Name is required', 'error')
-            return redirect(url_for('profile'))
+            return redirect(url_for('editprofile'))
 
         current_user.name = name
 
@@ -65,7 +65,12 @@ def profile():
         db.session.commit()
 
         flash('Profile updated successfully', 'success')
-        return redirect(url_for('profile'))
+        return redirect(url_for('edit_profile'))
+    return render_template('edit_profile.html', user=current_user)
+
+@app.route('/profile')
+@login_required
+def profile():
     return render_template('profile.html', user=current_user)
 
 @app.route('/register', methods=['GET', 'POST'])

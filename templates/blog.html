@@ -65,10 +65,11 @@
                     {% if current_user.is_authenticated %}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            {{ user.name }} <span class="caret"></span>
+                            {{ current_user.name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                            <li><a href="{{ url_for('edit_profile') }}">Edit Profile</a></li>
                             <li><a href="{{ url_for('logout') }}">Logout</a></li>
                         </ul>
                     </li>
@@ -79,10 +80,13 @@
             </nav>
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-
         </div>
     </header>
+
+    </section>
+
+    <header id="header" class="header d-flex align-items-center">
+
     <h1><img src="/assets/img/good.png" alt="" srcset=""></h1>
 
 

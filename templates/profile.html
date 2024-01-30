@@ -64,10 +64,11 @@
                     {% if current_user.is_authenticated %}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            {{ user.name }} <span class="caret"></span>
+                            {{ current_user.name }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                            <li><a href="{{ url_for('edit_profile') }}">Edit Profile</a></li>
                             <li><a href="{{ url_for('logout') }}">Logout</a></li>
                         </ul>
                     </li>
@@ -78,28 +79,21 @@
             </nav>
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-
         </div>
     </header>
 
+
     <main>
-        <div class=" card-login ">
-            <h1>Edit Profile <br>Name: {{ user.name }}</h1>
-            <form method="POST" action="{{ url_for('profile') }}">
-                <div class="txt_field">
-                    <input type="text" name="name" value="{{ user.name }}" required>
-                    <span></span>
-                    <label for="name">New Name:</label>
+        <section>
+            <div class="section-header">
+                <h2>My Profile</h2>
+                <div class=" card-login ">
+                    <h1>Name: {{ user.name }}</h1>
+                    <h1>Username: {{ user.username }}</h1>
+                    <a class="register-btn" href="{{ url_for('edit_profile') }}">Edit Profile</a>
                 </div>
-                <div class="txt_field">
-                    <input type="password" name="password" required id="password" >
-                    <span></span>
-                    <label for="password">New Password:</label>
-                </div>
-                <input type="submit" value="Update Profile" id="ntp"></input>
-            </form>
-        </div>
+            </div>
+        </section>
     </main>
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
