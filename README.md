@@ -12,3 +12,7 @@ and run flask application with
 ```
 flask --app web  run --debug
 ```
+
+```
+Set-ExecutionPolicy Unrestricted -Scope Process
+```
