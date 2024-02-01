@@ -103,6 +103,10 @@ def register():
 def blog():
     return render_template("blog.html")
 
+@app.route('/my_course')
+def my_course():
+    return render_template("my_course.html")
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
