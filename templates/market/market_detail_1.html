@@ -1,4 +1,3 @@
-
 <head>
     <title>Xhi3r Shop</title>
     <meta charset="utf-8">
@@ -83,6 +82,29 @@
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         </div>
     </header>
+    <main id="main">
+        <div class="product-container row gy-4">
+            <section class="pic-section">
+                <img src="{{ url_for('static', filename='img/market/product-1.jpg') }}">
+            </section>
+            <div class="product-detail">
+                <h2>VGN F1 MOBA</h2>
+                <ul class="product-features">
+                    <li class="bi">1000 - 4000 hz</li>
+                    <li class="bi">57 g weigth</li>
+                    <li class="bi"> paw3395 sensor</li>
+                </ul>
+                <div class="product-price">
+                    <span class="original-price">฿2,429</span>
+                    <span class="discounted-price">฿1499</span>
+                    <span class="discount-percentage">40% off</span>
+                </div>
+                <button class="add-to-cart-button">Buy bow</button>
+            </div>
+        </div>
+        </div>
+    </main>
+
 
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
