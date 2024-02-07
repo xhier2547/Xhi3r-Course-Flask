@@ -101,7 +101,15 @@ def register():
 
 @app.route('/blog')
 def blog():
-    return render_template("blog.html")
+    return render_template("blog/blog.html")
+
+@app.route('/blog-2')
+def blog2():
+    return render_template("blog/blog2.html")
+
+@app.route('/blog-3')
+def blog3():
+    return render_template("blog/blog3.html")
 
 @app.route('/my_course')
 def my_course():
