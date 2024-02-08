@@ -84,7 +84,29 @@
         </div>
     </header>
 
-    <h1>3</h1>
+    <main id="main">
+        <div class="product-container row gy-4">
+            <section class="pic-section">
+                <img src="{{ url_for('static', filename='img/market/product-3.jpg') }}">
+            </section>
+            <div class="product-detail">
+                <h2>Chair of God</h2>
+                <ul class="product-features">
+                    <li class="bi">high resilient</li>
+                    <li class="bi">low weight</li>
+                    <li class="bi">recommend by Malee</li>
+                </ul>
+                <div class="product-price">
+                    <span class="original-price">฿99,998</span>
+                    <span class="discounted-price">฿200</span>
+                    <span class="discount-percentage">98% off</span>
+                </div>
+                <button class="add-to-cart-button">Buy bow</button>
+            </div>
+        </div>
+        </div>
+    </main>
+
 
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

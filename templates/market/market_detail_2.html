@@ -84,7 +84,29 @@
         </div>
     </header>
 
-    <h1>2</h1>
+    <main id="main">
+        <div class="product-container row gy-4">
+            <section class="pic-section">
+                <img src="{{ url_for('static', filename='img/market/product-2.jpg') }}">
+            </section>
+            <div class="product-detail">
+                <h2>Rk61 Hot-Swap</h2>
+                <ul class="product-features">
+                    <li class="bi">60% keyboard</li>
+                    <li class="bi">3 mode</li>
+                    <li class="bi">red switch </li>
+                </ul>
+                <div class="product-price">
+                    <span class="original-price">฿2,149</span>
+                    <span class="discounted-price">฿1,799</span>
+                    <span class="discount-percentage">17% off</span>
+                </div>
+                <button class="add-to-cart-button">Buy bow</button>
+            </div>
+        </div>
+        </div>
+    </main>
+
 
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
