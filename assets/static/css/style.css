@@ -8,7 +8,7 @@
 :root {
   --color-default: #222222;
   --color-primary: #5271FF;
-  --color-secondary: #f85a40;
+  --color-secondary: #f8b840;
 }
 
 /* Smooth scroll behavior */
@@ -170,7 +170,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: rgba(248, 90, 64, 0.8);
+  background: #9d52ff;
   color: #fff;
 }
 
